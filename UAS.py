@@ -9,3 +9,28 @@ print("Jakarta Utara - 14110                                     No. PO         
 print("                                                          Tgl.PO          :25/01/2008      ")
 print("                                                          Tgl Jatuh Tempo :13/02/2008      ")
 print("------------------------------------------------------------------------------------------")
+nama_barang = []
+satuan = []
+kuantum = []
+harga_satuan = []
+jumlah = []
+
+ulang = int(input("Masukkan jumlah jenis barang : "))
+
+for i in range(ulang):
+    print(f"\nBarang ke-{i+1}")
+    nama = input("Nama barang   : ")
+    sat = input("Satuan        : ")
+    qty = int(input("Kuantum       : "))
+    harga = int(input("Harga satuan  : "))
+
+    total = qty * harga
+
+    nama_barang.append(nama)
+    satuan.append(sat)
+    kuantum.append(qty)
+    harga_satuan.append(harga)
+    jumlah.append(total)
+
+print("No   Nama Barang        Satuan   Kuantum   Harga Satuan     Jumlah")
+print("------------------------------------------------------------------------------------------")
