@@ -1,37 +1,36 @@
-print("KRISHAND INDONESIA")
-print("Jakarta Selatan - Indonesia")
-print("------------------------------------------------------------------------------------------")
-print("                                 I N V O I C E                                            ")
-print("Kepada Yth.                                               No.             :FT./003/01/2008 ")
-print("PT ISM BOGOSARI FLOUR JAKARTA                             Tanggal         :30/01/2008      ")
-print("Jl. Raya Cilincing, Tanjung Priok                         Mata uang       :IDR             ")
-print("Jakarta Utara - 14110                                     No. PO          :PO-0001/01/2008 ")
-print("                                                          Tgl.PO          :25/01/2008      ")
-print("                                                          Tgl Jatuh Tempo :13/02/2008      ")
-print("------------------------------------------------------------------------------------------")
-nama_barang = []
-satuan = []
-kuantum = []
-harga_satuan = []
-jumlah = []
+def header_invoice():
+    print("KRISHAND INDONESIA")
+    print("Jakarta Selatan - Indonesia")
+    print("------------------------------------------------------------------------------------------")
+    print("                                 I N V O I C E                                            ")
+    print("Kepada Yth.                                               No.             :FT./003/01/2008 ")
+    print("PT ISM BOGOSARI FLOUR JAKARTA                             Tanggal         :30/01/2008      ")
+    print("Jl. Raya Cilincing, Tanjung Priok                         Mata uang       :IDR             ")
+    print("Jakarta Utara - 14110                                     No. PO          :PO-0001/01/2008 ")
+    print("                                                          Tgl.PO          :25/01/2008      ")
+    print("                                                          Tgl Jatuh Tempo :13/02/2008      ")
+    print("------------------------------------------------------------------------------------------")
 
-ulang = int(input("Masukkan jumlah jenis barang : "))
+def input_data():
+    global nama_barang, satuan, kuantum, harga_satuan, jumlah, ulang
 
-for i in range(ulang):
-    print(f"\nBarang ke-{i+1}")
-    nama = input("Nama barang   : ")
-    sat = input("Satuan        : ")
-    qty = int(input("Kuantum       : "))
-    harga = int(input("Harga satuan  : "))
+    # LIST DATA
+    nama_barang = []
+    satuan = []
+    kuantum = []
+    harga_satuan = []
+    jumlah = []
 
-    total = qty * harga
+    ulang = int(input("Masukkan jumlah jenis barang : "))
 
-    nama_barang.append(nama)
-    satuan.append(sat)
-    kuantum.append(qty)
-    harga_satuan.append(harga)
-    jumlah.append(total)
+    for i in range(ulang):
+        print(f"\nBarang ke-{i+1}")
+        nama = input("Nama barang   : ")
+        sat = input("Satuan        : ")
+        qty = int(input("Kuantum       : "))
+        harga = int(input("Harga satuan  : "))
 
+<<<<<<< HEAD
 def output_data():
     print("No   Nama Barang        Satuan   Kuantum   Harga Satuan     Jumlah")
     print("------------------------------------------------------------------------------------------")
@@ -95,3 +94,12 @@ print("-------------------------------------------------------------------------
 header_invoice()
 data = input_data()
 output_data(*data)
+=======
+        total = qty * harga
+
+        nama_barang.append(nama)
+        satuan.append(sat)
+        kuantum.append(qty)
+        harga_satuan.append(harga)
+        jumlah.append(total)
+>>>>>>> 7f2cadc16983ad89356975cb28bae67c71158611
